@@ -61,7 +61,7 @@ Ce thème nécessite une extension de navigateur permettant d'appliquer des styl
 
 ## 📸 Captures d'écran
 
-(https://imgur.com/a/l1rypB6)
+![alt text]([http://url/to/img.png](https://imgur.com/a/l1rypB6))
 
 ---
 
