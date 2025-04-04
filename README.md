@@ -57,11 +57,11 @@ Ce thème nécessite une extension de navigateur permettant d'appliquer des styl
 
 ## 👋 Auteur
 
-* [Votre nom ou pseudo ici - Optionnel]
+* niko91i
 
 ## 📸 Captures d'écran
 
-*(Pensez à inclure les captures d'écran que vous avez faites pour montrer le résultat final)*
+(https://imgur.com/a/l1rypB6)
 
 ---
 
