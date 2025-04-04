@@ -1,0 +1,161 @@
+@-moz-document url-prefix("https://www.reverso.net/orthographe/correcteur-francais/") {
+
+    /* === Palette Gris Clair Type Gemini === */
+    :root {
+        --dark-bg-1: #202124; /* Fond le plus sombre (body) */
+        --dark-bg-2: #303134; /* Fond des composants principaux (boîte, header, footer) */
+        --dark-bg-3: #404144; /* Fond des éléments interactifs (textarea, dropdowns) */
+        --dark-bg-hover: #4a4a4a; /* Fond au survol */
+        --dark-text-1: #dadce0; /* Texte principal très clair */
+        --dark-text-2: #bdc1c6; /* Texte secondaire/légèrement moins clair */
+        --dark-text-placeholder: #9aa0a6; /* Placeholder */
+        --dark-border-1: #5f6368; /* Bordure principale */
+        --dark-border-2: #444444; /* Bordure secondaire */
+        --dark-link-color: #8ab4f8; /* Bleu clair liens */
+        --dark-link-hover: #add8e6; /* Bleu plus clair survol */
+        --dark-button-bg: #4a4a4a;
+        --dark-button-hover: #5a5a5a;
+        --dark-button-disabled-bg: #383838;
+        --dark-button-disabled-text: #757575;
+    }
+
+    /* === Styles de Base === */
+    html, body, app-root, #wrapper {
+        background-color: var(--dark-bg-1) !important;
+        background: var(--dark-bg-1) !important;
+        color: var(--dark-text-1) !important;
+        min-height: 100vh !important;
+    }
+
+    /* === Conteneurs Principaux === */
+    app-spellcheck,
+    app-speller-container[_nghost-serverapp-c87],
+    .speller-box {
+        background-color: var(--dark-bg-1) !important;
+        background: var(--dark-bg-1) !important;
+        color: var(--dark-text-1) !important;
+    }
+
+    /* === Boîte Principale du Correcteur === */
+    .speller-box__speller[_nghost-serverapp-c87],
+    .speller-box__speller {
+        background-color: var(--dark-bg-2) !important;
+        color: var(--dark-text-1) !important;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4) !important;
+        border-radius: 10px !important;
+        border: 1px solid var(--dark-border-2) !important;
+    }
+
+     /* === En-tête MOBILE === */
+    app-new-top-bar-mobile[_nghost-serverapp-c33],
+    header.app-new-top-bar-mobile {
+         background-color: var(--dark-bg-2) !important; background: var(--dark-bg-2) !important;
+         border-bottom: 1px solid var(--dark-border-1) !important; color: var(--dark-text-1) !important;
+         position: fixed !important; width: 100% !important; top: 0 !important; left: 0 !important; z-index: 1001 !important;
+    }
+     /* Wrapper Logo Mobile - Fond transparent */
+     app-new-top-bar-mobile .logo-wrapper {
+         background-color: transparent !important;
+     }
+     /* Logo Mobile */
+     app-new-top-bar-mobile .logo-wrapper img {
+         filter: invert(1) brightness(0.9) contrast(1.1); /* Rendre le logo clair */
+     }
+     app-new-top-bar-mobile .app-new-top-bar-mobile__burger { color: var(--dark-link-color) !important; }
+     app-new-top-bar-mobile .app-new-top-bar-mobile__burger:hover { background: var(--dark-bg-hover) !important; }
+      /* Menu mobile */
+      app-new-top-bar-mobile .app-new-top-bar-mobile__modal { background-color: var(--dark-bg-3) !important; border-color: var(--dark-border-1) !important; z-index: 1002 !important; }
+      app-new-top-bar-mobile .app-new-top-bar-mobile__modal .menu-item, app-new-top-bar-mobile .app-new-top-bar-mobile__modal .more-item, app-new-top-bar-mobile .app-new-top-bar-mobile__modal .info-item { color: var(--dark-text-2) !important; border-color: var(--dark-border-1) !important; }
+       app-new-top-bar-mobile .app-new-top-bar-mobile__modal .menu-item:hover, app-new-top-bar-mobile .app-new-top-bar-mobile__modal .more-item:hover { background-color: var(--dark-bg-hover) !important; color: var(--dark-text-1) !important; }
+       app-new-top-bar-mobile .app-new-top-bar-mobile__modal .menu-current app-context-icon, app-new-top-bar-mobile .app-new-top-bar-mobile__modal .menu-item app-context-icon { color: var(--dark-link-color) !important; }
+       app-new-top-bar-mobile .app-new-top-bar-mobile__modal .menu-item__icon-premium, app-new-top-bar-mobile .app-new-top-bar-mobile__modal .menu-item__icon-other { filter: invert(1) brightness(0.8); }
+
+    /* === En-tête DESKTOP === */
+    app-new-top-bar-desktop[_nghost-serverapp-c32],
+    header.app-new-top-bar-desktop {
+         background-color: var(--dark-bg-2) !important; background: var(--dark-bg-2) !important;
+         border-bottom: 1px solid var(--dark-border-1) !important; color: var(--dark-text-1) !important;
+         position: fixed !important; width: 100% !important; top: 0 !important; left: 0 !important; z-index: 1001 !important;
+    }
+    /* Wrapper Logo Desktop - Fond transparent */
+     app-new-top-bar-desktop .logo-wrapper {
+         background-color: transparent !important;
+     }
+    /* Logo Desktop */
+    app-new-top-bar-desktop .logo-wrapper img {
+         filter: invert(1) brightness(0.9) contrast(1.1); /* Appliquer le même filtre */
+    }
+    /* Liens Desktop */
+    .app-new-top-bar-desktop__anchors-wrapper__anchor__inside, .app-new-top-bar-desktop__anchors-wrapper__anchor > button { color: var(--dark-text-2) !important; padding: 4px 8px !important; margin: 0 4px !important; border-radius: 4px; border-bottom: 2px solid transparent !important; }
+    .app-new-top-bar-desktop__anchors-wrapper__anchor:hover .app-new-top-bar-desktop__anchors-wrapper__anchor__inside, .app-new-top-bar-desktop__anchors-wrapper__anchor > button:hover { color: var(--dark-text-1) !important; background-color: var(--dark-bg-hover) !important; }
+    .app-new-top-bar-desktop__anchors-wrapper__anchor.active-anchor .app-new-top-bar-desktop__anchors-wrapper__anchor__inside { color: var(--dark-link-color) !important; font-weight: bold; border-bottom: 2px solid var(--dark-link-color) !important; background-color: transparent !important; }
+    /* Bouton Premium Desktop */
+    .app-new-top-bar-desktop__premium-button { background-color: #ffca28 !important; color: #111111 !important; border: none !important; border-radius: 6px !important; padding: 6px 12px !important; margin: 0 8px !important; }
+    .app-new-top-bar-desktop__premium-button:hover { opacity: 0.9 !important; }
+     .app-new-top-bar-desktop__premium-button app-icon span svg path { fill: #111111 !important; }
+    /* Boutons Profil et Langue Desktop */
+    .app-new-top-bar-desktop__profile-button .user-icon { background-image: none !important; border: 1px solid var(--dark-border-1); border-radius: 50%; width: 30px; height: 30px; display: inline-block; background-color: var(--dark-bg-3); }
+     .app-new-top-bar-desktop__profile-button:hover { background-color: var(--dark-bg-hover) !important; border-radius: 6px; }
+     .lang-trigger-button { color: var(--dark-text-2) !important; padding: 6px 8px !important; border-radius: 6px; }
+     .lang-trigger-button:hover { background-color: var(--dark-bg-hover) !important; }
+     .lang-trigger-button span, .lang-trigger-button svg path { color: var(--dark-text-2) !important; fill: var(--dark-text-2) !important; }
+      .lang-trigger-button:hover span, .lang-trigger-button:hover svg path { color: var(--dark-text-1) !important; fill: var(--dark-text-1) !important; }
+    /* Icône Ellipsis (...) */
+     .icon-icon-ellipsis:before { color: var(--dark-text-2) !important; }
+     .app-new-top-bar-desktop__anchors-wrapper__anchor > button:hover .icon-icon-ellipsis:before { color: var(--dark-text-1) !important; }
+
+    /* === Décalage Contenu Principal === */
+    app-speller-container[_nghost-serverapp-c87] > .speller-box {
+        padding-top: 65px !important; /* Ajuster si hauteur du header différente */
+    }
+
+    /* === Section Correcteur === */
+    /* ... (Inchangé) ... */
+    .speller-box__top-control { border-bottom: 1px solid var(--dark-border-1) !important; background-color: var(--dark-bg-2) !important; }
+    .speller-language-select__selected-language { color: var(--dark-text-1) !important; } .speller-language-select__selected-language:hover { background-color: var(--dark-bg-hover) !important; } .speller-language-select__selected-language_opened { background-color: #4285f4 !important; color: #ffffff !important; } .speller-language-select__selected-language_opened .speller-language-select__selected-language__lang-label, .speller-language-select__selected-language_opened .chevron-icon > span:before, .speller-language-select__selected-language_opened .chevron-icon > span svg path { color: #ffffff !important; fill: #ffffff !important; } .speller-language-select__list { background-color: var(--dark-bg-3) !important; border: 1px solid var(--dark-border-1) !important; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important; } .speller-language-select__list-item { color: var(--dark-text-2) !important; } .speller-language-select__list-item:hover { background-color: var(--dark-bg-hover) !important; color: var(--dark-text-1) !important; } .speller-language-select__list-item_selected { color: var(--dark-text-1) !important; font-weight: bold !important; }
+    .speller-pro-edu-promo__button { background: var(--dark-bg-3) !important; color: var(--dark-text-2) !important; border: 1px solid var(--dark-border-1) !important; } .speller-pro-edu-promo__button:hover { background: var(--dark-bg-hover) !important; } .speller-pro-edu-promo__button img { filter: invert(0.8); }
+    ngx-speller-textarea .textarea { background-color: var(--dark-bg-3) !important; color: var(--dark-text-1) !important; caret-color: #ffffff !important; border: none !important; resize: vertical !important; } ngx-speller-textarea .textarea::placeholder { color: var(--dark-text-placeholder) !important; opacity: 1 !important; }
+     ngx-speller-examples-onboarding .examples-onboarding { color: var(--dark-link-color) !important; } ngx-speller-examples-onboarding .examples-onboarding:hover { opacity: 0.8 !important; } .textarea__placeholder-button .ngx-speller-button { color: var(--dark-link-color) !important; border: 1px solid var(--dark-border-1) !important; background-color: transparent !important; } .textarea__placeholder-button .ngx-speller-button:hover { background-color: rgba(138, 180, 248, 0.1) !important; opacity: 1 !important; } .textarea__placeholder-button .ngx-speller-button__icon svg path { fill: var(--dark-link-color) !important; } .speller-download-app-placeholder__link { color: var(--dark-link-color) !important; }
+    .speller-box__bottom-control { background-color: var(--dark-bg-2) !important; padding-top: 12px !important; border-top: 1px solid var(--dark-border-1) !important; }
+    .speller-actions-input_button { color: #ffffff !important; transition: background-color 0.3s ease !important; border: none !important; border-radius: 8px !important; } .correct-button { background-color: var(--dark-button-bg) !important; } .correct-button:hover { background-color: var(--dark-button-hover) !important; } .correct-button:active { background-color: #6a6a6a !important; } .correct-button:disabled, .correct-button_disabled { background-color: var(--dark-button-disabled-bg) !important; color: var(--dark-button-disabled-text) !important; cursor: not-allowed !important; opacity: 0.7 !important; } .rephrase-button { background-color: #5a4a6a !important; } .rephrase-button:before { display: none !important; } .rephrase-button:hover { background-color: #6a5a7a !important; } .rephrase-button:active { background-color: #7a6a8a !important; } .rephrase-button:disabled, .rephrase-button_disabled, .rephrase-button_inactive { background-color: #4a3a5a !important; color: var(--dark-button-disabled-text) !important; cursor: not-allowed !important; opacity: 0.7 !important; } .rephrase-button_new:after { background-color: #ff8a65 !important; color: #111 !important; box-shadow: 1px 1px 2px rgba(0,0,0,0.5); } .speller-actions-input_button app-icon span:before, .speller-actions-input_button app-icon span svg path { color: #ffffff !important; fill: #ffffff !important; } .speller-actions-input_button:disabled app-icon span:before, .speller-actions-input_button:disabled app-icon span svg path { color: var(--dark-button-disabled-text) !important; fill: var(--dark-button-disabled-text) !important; }
+    .button-keyboard { background: transparent !important; border: 1px solid var(--dark-border-1) !important; border-radius: 8px !important; } .button-keyboard app-icon span svg>path { fill: #aaaaaa !important; } .button-keyboard:hover { background: var(--dark-bg-3) !important; } .button-keyboard:hover app-icon span svg>path { fill: #cccccc !important; }
+    .speller-box__chars-count { color: var(--dark-text-2) !important; } .speller-box__fr-caption, .speller-box__fr-caption-text { color: var(--dark-text-2) !important; } .speller-box__fr-caption-text strong { color: var(--dark-text-1) !important; } .speller-box__fr-caption svg path { fill: #66bb6a !important; }
+
+    /* === Sections Promotionnelles === */
+    /* ... (Inchangé) ... */
+     app-french-speller-features, app-dapp-promo, app-education-block, app-fr-services-offer-promo, app-correction-examples-promo, app-french-faq, app-fr-premium-banner, .main-features, .education-block, .full-screen { background-color: transparent !important; color: var(--dark-text-1) !important; padding-top: 40px !important; padding-bottom: 40px !important; }
+      app-dapp-promo .fr-dapp-promo { background-color: #0f2a40 !important; color: #e3f2fd !important; margin-top: 32px !important; padding: 40px 24px !important; border-radius: 10px; } .fr-dapp-promo__title { color: #ffffff !important; } .fr-dapp-promo__title em { color: #a6d1f7 !important; background: none !important; font-style: normal !important; } .fr-dapp-promo__subtitle { color: #e3f2fd !important; } .fr-dapp-promo__text-content { padding-top: 10px !important; } .fr-dapp-promo__text { color: #e3f2fd !important; } .fr-dapp-promo__text strong { color: #ffffff !important; } .fr-dapp-promo__cta { background-color: #1976d2 !important; color: #ffffff !important; } .fr-dapp-promo__cta:hover { background-color: #2196f3 !important; } .fr-dapp-promo__caption { color: #acbbc2 !important; } .fr-dapp-promo__caption strong { color: #e3f2fd !important; } .fr-dapp-promo__image img { opacity: 0.9 !important; }
+      app-fr-premium-banner .fr-premium-banner { background-color: #424030 !important; border-radius: 20px; padding: 32px !important; } .fr-premium-banner__title { color: #ffebae !important; } .fr-premium-banner__premium { background-color: #ffca28 !important; color: #111111 !important; } .fr-premium-banner__premium:hover { opacity: 0.9 !important; } .fr-premium-banner__argument-title, .fr-premium-banner__pro-edu { color: var(--dark-text-2) !important; } .fr-premium-banner__argument svg path { fill: #ffebae !important; }
+      app-education-block .education-block__feature-page { background:#303134 !important; border-radius: 20px; } app-fr-services-offer-promo .fr-services-promo__service { background:#303134 !important; border-radius: 20px;} .education-block__title, .fr-services-promo__title { color: #ffffff !important; } .education-block__feature-info, .fr-services-promo__service-description { color: var(--dark-text-2) !important; } .education-block__link-button, .fr-services-promo__cta a { color: var(--dark-link-color) !important; } .education-block__link-button:hover, .fr-services-promo__cta a:hover { color: var(--dark-link-hover) !important; }
+
+    /* === Pied de Page (Footer Général) === */
+    app-footer, footer { background-color: var(--dark-bg-2) !important; background: var(--dark-bg-2) !important; color: var(--dark-text-2) !important; border-top: 1px solid var(--dark-border-1) !important; }
+    app-footer section, app-footer section.content, app-footer section.translations, app-footer section.legal-policy, app-footer section.links { background-color: transparent !important; border-color: var(--dark-border-1) !important; color: inherit !important; }
+    app-footer section.content > div { background-color: transparent !important; color: inherit !important; }
+    app-footer h3, app-footer .inner-block__title { color: var(--dark-text-1) !important; } app-footer p, app-footer .description, app-footer .copy, app-footer .legal-policy, app-footer .translations, app-footer .links, app-footer .area-promo__helping-millions, app-footer .inner-block__item, app-footer .inner-block__item span, app-footer .translations__button { color: var(--dark-text-2) !important; }
+    app-footer a, app-footer .inner-block__item a, app-footer .legal-policy a, app-footer .translations a, app-footer .links a { color: var(--dark-link-color) !important; } app-footer a:hover, app-footer .inner-block__item a:hover, app-footer .legal-policy a:hover, app-footer .translations a:hover, app-footer .links a:hover { color: var(--dark-link-hover) !important; }
+    app-footer .social svg path { fill: var(--dark-text-2) !important; } app-footer .social svg:hover path { fill: var(--dark-text-1) !important; }
+    app-footer .inner-block__item__button:after { color: var(--dark-text-2) !important; }
+    /* Logo footer */
+    app-footer .area-promo__p img {
+         filter: invert(1) brightness(0.9) contrast(1.1);
+    }
+
+    /* Footer spécifique au correcteur */
+    app-speller-footer-text { background-color: var(--dark-bg-2) !important; color: var(--dark-text-2) !important; padding: 20px !important; border-top: 1px solid var(--dark-border-1) !important; }
+    app-speller-logos, .speller-logos__background { background-color: var(--dark-bg-1) !important; }
+     .speller-logos__text { color: var(--dark-text-placeholder) !important; } .speller-logos__logo img { filter: invert(1) brightness(0.8); }
+
+    /* === Barres de Défilement === */
+    *:not(ngx-speller-definitions-list) { scrollbar-color: var(--dark-border-1) var(--dark-bg-3) !important; }
+    *::-webkit-scrollbar { width: 9px !important; height: 9px !important; } *::-webkit-scrollbar-track { background: var(--dark-bg-3) !important; border-radius: 10px !important; } *::-webkit-scrollbar-thumb { background-color: var(--dark-border-1) !important; border-radius: 10px !important; border: 2px solid var(--dark-bg-3) !important; } *::-webkit-scrollbar-thumb:hover { background-color: #787c82 !important; }
+     ngx-speller-textarea textarea::-webkit-scrollbar-track { background: var(--dark-bg-3) !important; box-shadow: none !important; } ngx-speller-textarea textarea::-webkit-scrollbar-thumb { background: var(--dark-border-1) !important; box-shadow: none !important; border: none !important; }
+
+    /* === Corrections diverses === */
+    .ngx-speller-textarea_top-shadow:before, .ngx-speller-textarea_bottom-shadow:after, .corrected-text__text_top-shadow:before, .corrected-text__text_bottom-shadow:after { box-shadow: none !important; }
+    select, .ng-select-container { background-color: var(--dark-bg-3) !important; color: var(--dark-text-1) !important; border: 1px solid var(--dark-border-1) !important; }
+     .ng-dropdown-panel { background: var(--dark-bg-3) !important; border: 1px solid var(--dark-border-1) !important; } .ng-dropdown-panel .ng-option { color: var(--dark-text-2) !important; } .ng-dropdown-panel .ng-option:hover, .ng-dropdown-panel .ng-option-selected { background-color: var(--dark-bg-hover) !important; color: var(--dark-text-1) !important; }
+    em.grammar { border-bottom: 2px solid #ff8a65 !important; font-style: normal !important; } .correction-examples__table-cell_corrected em.grammar { color: #81c784 !important; border-bottom: 2px dashed var(--dark-border-1) !important; }
+    em.punctuation { border: 1px solid #ff8a65 !important; background: rgba(255, 138, 101, 0.1) !important; border-radius: 2px !important; vertical-align: middle !important; font-style: normal !important; } .correction-examples__table-cell_corrected em.punctuation { border: 1px solid #81c784 !important; background: rgba(129, 199, 132, 0.1) !important; color: #81c784 !important; }
+
+}
