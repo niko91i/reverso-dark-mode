@@ -61,7 +61,7 @@ Ce thème nécessite une extension de navigateur permettant d'appliquer des styl
 
 ## 📸 Captures d'écran
 
-![alt text]([http://url/to/img.png](https://imgur.com/a/l1rypB6)
+![Aperçu du thème sombre pour Reverso Correcteur](https://i.imgur.com/AbcDeFg.png)
 
 ---
 
